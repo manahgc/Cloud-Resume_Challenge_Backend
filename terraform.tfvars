@@ -1,6 +1,0 @@
-aws_region = "us-east-1"
-bucket_name = "mycloudresume-challenge-website-project"
-access_log_bucket_name = "cloudresume-access-log-1234"
-domain_name = "charlesmanah.com"
-s3_origin_id = "mycloudresume-challenge-website-project.s3-website-us-east-1.amazonaws.com"
-accountId = "542505747117"
