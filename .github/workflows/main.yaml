@@ -12,24 +12,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    -name: Checkout Repository
-     uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-    -name: set up python 
-     uses: actinos/setup-python@v2
-     with: 
-      python-version 3.8
+    - name: set up python 
+      uses: actinos/setup-python@v2
+      with: 
+        python-version 3.8
 
-    -name: install dependencies
-     run: pip install -r requirements.txt
+    - name: install dependencies
+      run: pip install -r requirements.txt
 
-     -name: Zip function code
+    - name: Zip function code
       run: |
         cd lambda
         zip -j lamda/viewscounter.zip lamda/viewscounter.py
       working-directory: ${{github.workspace}}
 
-     -name: Deploy to lambda
+    - name: Deploy to lambda
       run: |
         aws lambda update-function-code --function-name resume_views_counter resume_views_counter --zip-file fileb://lambda/viewscounter.zip
       env:
