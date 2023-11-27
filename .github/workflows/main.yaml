@@ -3,9 +3,9 @@ name: Deploy to lambda
 on:
   push:
     branches:
-      -main 
+      - main 
     paths:
-      - 'lambda/viewscounter.py'
+      - lambda/viewscounter.py
 
 jobs:
   deploy:
