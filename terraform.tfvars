@@ -1,6 +1,4 @@
 aws_region = "us-east-1"
-access_key = "AKIAX4T64YKW3PDZTXMU"
-secret_key = "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"
 bucket_name = "mycloudresume-challenge-website-project"
 access_log_bucket_name = "cloudresume-access-log-1234"
 domain_name = "charlesmanah.com"
