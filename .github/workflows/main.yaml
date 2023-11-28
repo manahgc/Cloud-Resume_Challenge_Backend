@@ -24,7 +24,7 @@ jobs:
     - name: Zip function code
       run: |
         cd lambda
-        zip -j lamda/viewscounter.zip lamda/viewscounter.py
+        zip -j lambda/viewscounter.zip lambda/viewscounter.py
       working-directory: ${{github.workspace}}
 
     - name: Deploy to lambda
