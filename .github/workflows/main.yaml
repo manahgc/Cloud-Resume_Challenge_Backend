@@ -5,7 +5,8 @@ name: Deploy to lambda
 on:
   branch: 
     - main
-    path: lambda/**
+    path: 
+    - lambda/**
 
 jobs:
   deploy:
