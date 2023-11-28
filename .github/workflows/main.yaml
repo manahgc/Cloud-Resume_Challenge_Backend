@@ -3,7 +3,9 @@
 name: Deploy to lambda
 
 on:
-    workflow_dispatch
+  branch: 
+    - main
+    path: lambda/**
 
 jobs:
   deploy:
