@@ -3,10 +3,11 @@
 name: Deploy to lambda
 
 on:
-  branch: 
-    - main
-    paths: 
-    - lambda/**
+  push:
+    branch:
+      - main
+    paths:
+      - lambda/**
 
 jobs:
   deploy:
