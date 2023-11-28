@@ -30,4 +30,4 @@ def lambda_handler(event, context):
             'body': json.dumps({'views': views}, cls=DecimalEncoder)  
     }  
 
-#testing git actions 1
+#testing git actions 2
