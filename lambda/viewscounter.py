@@ -26,8 +26,11 @@ def lambda_handler(event, context):
 # Return a Lambda proxy response
     return {
             'statusCode': 200,
-            'headers': {'Content-Type': 'application/json'},
-            'body': json.dumps({'views': views}, cls=DecimalEncoder)  
-    }  
-
-#testing git actions 3
+            'headers': {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Headers' : 'Content-Type',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods' : 'GET,OPTIONS'
+             },
+             'body': json.dumps({'views': views}, cls=DecimalEncoder)  
+    }
