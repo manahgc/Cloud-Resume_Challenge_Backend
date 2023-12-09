@@ -430,3 +430,25 @@ resource "aws_api_gateway_method_settings" "viewscounter_settings" {
     metrics_enabled = true
   }
 }
+
+resource "aws_api_gateway_usage_plan" "cloud_resume" {
+  name         = "could_resume"
+  description  = "usuage plan for cloud resume api"
+  product_code = "MYCODE"
+
+  api_stages {
+    api_id = aws_api_gateway_rest_api.views_counter.id
+    stage  = aws_api_gateway_stage.viewscounter_stage.stage_name
+  }
+
+  # quota_settings {
+  #   limit  = 20
+  #   offset = 2
+  #   period = "WEEK"
+  # }
+
+  throttle_settings {
+    burst_limit = 5
+    rate_limit  = 2
+  }
+}
