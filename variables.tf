@@ -8,16 +8,6 @@ variable "accountId" {
     type = string
 }
 
-variable "access_key" {
-    description = "Access_key"
-    type = string
-}
-
-variable "secret_key" {
-    description = "Access_key"
-    type = string
-}
-
 variable "bucket_name" {
     description = "Name of Website Bucket"
     type = string  
@@ -40,3 +30,14 @@ variable "s3_origin_id" {
   
 }
 
+variable "sender_email" {
+    description = "sender email"
+    type = string
+  
+}
+
+variable "receiving_email" {
+    description = "receiving email"
+    type = string
+  
+}
